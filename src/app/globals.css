@@ -6,4 +6,16 @@
     .link-cabecalho {
         @apply block xl:p-5 sm:p-2 md:p-3 hover:bg-amber-400 transition-all duration-500 ease-out rounded font-bold;
     }
+
+    .rodape {
+        @apply bg-gray-800 text-white h-16 static w-full bottom-0;
+    }
+
+    .card-eletro-view {
+        @apply bg-slate-500;
+
+        & ul {
+            @apply flex flex-row flex-wrap justify-center;
+        }
+    }
 }
