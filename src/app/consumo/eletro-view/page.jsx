@@ -6,7 +6,7 @@ export default async function EletroView() {
     let items;
 
     try{
-        const response = await fetch('http://localhost:3000/minhas_APIS/eletronicos');
+        const response = await fetch('http://localhost:3000/minhas_APIS/eletronicos/0');
         items = await response.json();
         
     }catch(error){
