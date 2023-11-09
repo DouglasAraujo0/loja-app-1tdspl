@@ -2,20 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
 @layer components {
-    .link-cabecalho {
-        @apply block xl:p-5 sm:p-2 md:p-3 hover:bg-amber-400 transition-all duration-500 ease-out rounded font-bold;
+  .link-cabecalho {
+    @apply block xl:p-5 sm:p-2 md:p-3 hover:bg-amber-400 transition-all duration-500 ease-out rounded font-bold;
+  }
+
+  .rodape {
+    @apply bg-gray-800 text-white h-16 fixed w-full bottom-0;
+  }
+
+  .card-eletro-view {
+    @apply bg-slate-500;
+
+    & ul{
+      @apply flex flex-row flex-wrap justify-center;
     }
 
-    .rodape {
-        @apply bg-gray-800 text-white h-16 static w-full bottom-0;
-    }
+  }
 
-    .card-eletro-view {
-        @apply bg-slate-500;
+  .login-user{
+    @apply text-black h-16 w-full;
 
-        & ul {
-            @apply flex flex-row flex-wrap justify-center;
+    & div{
+      @apply m-10;
+    & form{
+      @apply flex flex-row flex-wrap justify-center m-auto w-4/6 bg-slate-800 rounded text-white font-extrabold border border-red-700;
+
+        & legend{
+          @apply m-auto p-3;
         }
+        & label{
+          @apply p-1 block;
+        }
+        & input{
+          @apply rounded p-3 w-96 text-black;
+        }
+
+        & button{
+          @apply block bg-red-700 text-white py-3 px-10 rounded m-auto transition-all duration-500 ease-out hover:bg-red-500;
+        }
+
     }
-}
+    }
+  }
+} 

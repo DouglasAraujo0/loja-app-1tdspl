@@ -33,4 +33,6 @@ export async function POST(request, response) {
         default:
             break;
     }
+
+    return NextResponse.json({"status":false});
 }
